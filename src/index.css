@@ -11,3 +11,200 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.register-box{
+  width: 30rem;
+  height: 31rem;
+  background: #aaf2f7;
+  margin-top: 13rem;
+  border-radius: 5%;
+}
+.register-form{
+  height: 80%; 
+}
+.register-text{
+  font-size: 20px;
+  width: 50%;
+  padding-top: 30px;
+}
+.color-text{
+  color: #0DB8C2;
+}
+.site-inputs{
+  width: 80%;
+  height: 2.3rem;
+  border-radius: 5px;
+  background: #aaf2f7;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+  margin-top: 3rem;
+}
+.site-inputs:focus{
+  background: white;
+  border: none;
+  outline: none;
+}
+.register-button{
+  position: relative;
+  top: 1rem;
+  border-radius: 10%;
+  font-size: 20px;
+  border: 1px solid #ffff;
+  color: #ffff;
+  background: #10e4e4;
+  height: 3rem;
+  width: 10rem;
+}
+.todo-app-logo{
+  position: relative;
+  top: 10rem;
+  width: 15rem;
+}
+.login-text{
+  position: relative;
+  top: 5rem;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+.login-text span{
+  color: #0DB8C2;
+}
+.login-box{
+  width: 30rem;
+  height: 31rem;
+  background: #171717;
+  margin-top: 13rem;
+  border-radius: 5%;
+}
+.login-form{
+  padding-top: 1rem;
+}
+.login-form .login-button{
+  width: 8rem;
+  height: 2.6rem;
+}
+.login-logo{
+  width: 17rem;
+  margin-top: 5rem;
+}
+.todo-app-box{
+  width: 35rem;
+  height: 13rem;
+  border: 1px solid;
+  background: #171717;
+  border-radius: 1rem;
+  margin-top: 20rem;
+}
+.input-button-box{
+  width: 30rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-button-box Button {
+  width: 5.5rem;  
+  margin-top: 3rem;
+}
+.todo-ul{
+  width: 30rem;
+  margin-top: 3rem;
+  list-style: none;
+}
+.todo-list{
+  height: 3.5rem;
+  border-radius: 5px;
+  background:#10e4e4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttomn-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid; */
+}
+.buttomn-box Button {
+  margin-right: 1rem;
+}
+/* .todoCheckbox{
+  margin-left: 1rem;
+} */
+.todo-inputs {
+  border: none;
+  margin-left: 0.5rem;
+}
+.todo-inputs:focus{
+  border: none;
+  outline: none;
+}
+.todo-avatar{
+  border: 1px solid #dbd8d8d3;
+  background:#aaf2f7;
+}
+.avatar-link{
+  width: 9rem;
+  text-decoration: none;
+  color: #10e4e4;
+  position: relative;
+  top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.avatar-link h4 {
+  font-size: 30px;
+}
+.settings-avatar-box{
+  width: 8rem;
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.settings-text{
+  margin-top: 1.5rem;
+}
+.settings-input-box{
+  width: 30rem;
+  height: 35rem;
+  margin-top: 2rem;
+  border: 1px solid black;
+}
+.settings-form{
+  margin-top: 6rem;
+}
+.settings-button{
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.back-box{
+  width: 7rem;
+  height: 2.5rem;
+  margin-top:1.5rem;
+  border-radius:1rem;
+  background: #10e4e4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid white;
+}
+.back-box img {
+  color: aliceblue;
+}
+.back-link{
+  margin-right: 1rem;
+  font-size: 22px;
+  color: aliceblue;
+  text-decoration: none;
+}
+.hero-inner h5 {
+  margin-bottom: 5rem;
+  color: red;
+}
