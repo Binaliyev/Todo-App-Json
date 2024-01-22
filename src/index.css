@@ -131,14 +131,15 @@ code {
   margin-right: 1rem;
 }
 /* .todoCheckbox{
-  margin-left: 1rem;
 } */
 .todo-inputs {
-  border: none;
-  margin-left: 0.5rem;
+  width: 20rem;
+  border: 1px solid black;
+  margin-left: 1rem;
+  border-radius: 0.3rem;
 }
 .todo-inputs:focus{
-  border: none;
+  border: 2px solid #287ee8e4;
   outline: none;
 }
 .todo-avatar{

@@ -22,27 +22,24 @@ export const Settings = () => {
         axios.get(`http://localhost:3000/users/${userId}`)
             .then(response => {
                 if (response.status === 200) {
-                    // console.log(response);
                     setData([response.data])
                 }
             })
     }, [])
     const acounteEdid = async () => {
-        window.localStorage.removeItem("userPassword")
         try {
             const request = await axios.put(`http://localhost:3000/users/${userId}`, {
                 name: nameRef.current.value,
                 lastname: lastnameRef.current.value,
                 email: emailRef.current.value,
-                password: passwordRef.current.value
+                password: passwordRef.current.value? passwordRef.current.value : userPassword
             })
             if (request.status === 200 || request.status === 201) {
                 console.log(request.data);
                 window.localStorage.setItem("userName", request.data.name)
                 window.localStorage.setItem("userLastname", request.data.lastname)
-                window.localStorage.setItem("userPassword", passwordRef.current.value)
+                {passwordRef.current.value? window.localStorage.setItem("userPassword", passwordRef.current.value) : null}  
                 window.localStorage.setItem("userEmail", request.data.email)
-
                 window.location.reload()
             }
         } catch (error) {
@@ -91,8 +88,7 @@ export const Settings = () => {
                             return (
                                 nameRef.current.value = item.name,
                                 lastnameRef.current.value = item.lastname,
-                                emailRef.current.value = item.email,
-                                passwordRef.current.value = userPassword ? userPassword : ""
+                                emailRef.current.value = item.email
                             )
                         })}
                         <div className="settings-input-box mx-auto">
@@ -100,7 +96,7 @@ export const Settings = () => {
                                 <SiteInputs readOnly={only ? "" : "readOnly"} type={"text"} placeholder="Name" ref={nameRef} />
                                 <SiteInputs readOnly={only ? "" : "readOnly"} type={"text"} placeholder="Lastname" ref={lastnameRef} />
                                 <SiteInputs readOnly={only ? "" : "readOnly"} type={"email"} placeholder="Email" ref={emailRef} />
-                                <SiteInputs readOnly={only ? "" : "readOnly"} type={"password"} placeholder="Password" ref={passwordRef} />
+                                <SiteInputs readOnly={only ? "" : "readOnly"} type={"password"} placeholder={userPassword} ref={passwordRef} />
                             </form>
                             <Button
                                 variant="outlined"
@@ -109,10 +105,13 @@ export const Settings = () => {
                                 type="submit"
                                 onClick={() => {
                                     setOnly(!only)
-                                    { nameRef.current.value !== userName ? acounteEdid() : null 
-                                    || lastnameRef.current.value !== userLastname ? acounteEdid() : null 
-                                    || passwordRef.current.value !== userPassword ? acounteEdid() : null
-                                    || emailRef.current.value !== userEmail? acounteEdid() : null }
+                                    { 
+                                        nameRef.current.value !== userName  
+                                        || lastnameRef.current.value !== userLastname 
+                                        || emailRef.current.value !== userEmail
+                                        || passwordRef.current.value? 
+                                        acounteEdid() : null
+                                    }
                                 }}
                             >Submit</Button>
                         </div>
